@@ -1,4 +1,4 @@
-const { log } = require('console');
+
 let users = require('../mocks/users')
 
 module.exports = {
