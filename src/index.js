@@ -27,8 +27,8 @@ const server = http.createServer((request, response) =>  {
       request.params = { id };
 
       response.send = (statusCode, body) => {
-        response.writeHead(400, { 'Content-type': 'application/json' });
-        response.end(JSON.stringify({error: 'User not found'}));
+        response.writeHead(statusCode, { 'Content-type': 'application/json' });
+        response.end(JSON.stringify(body));
       }
 
       route.handler(request, response);
